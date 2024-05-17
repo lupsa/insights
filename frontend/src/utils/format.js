@@ -14,6 +14,7 @@ export const dateFormats = [
 	{ label: 'Monday', value: 'Day of Week' },
 	{ label: 'January', value: 'Month of Year' },
 	{ label: 'Q1', value: 'Quarter of Year' },
+	{ label: '2020-01-12', value: 'Numeric' },
 ]
 
 export function getFormattedDate(date, dateFormat) {
@@ -46,6 +47,7 @@ export function getFormattedDate(date, dateFormat) {
 		Year: 'YYYY',
 		Quarter: '[Q]Q, YYYY',
 		'Day Short': 'Do MMM, YY',
+        Numeric: 'YYYY-MM-DD',
 	}[dateFormat]
 
 	if (!dayjsFormat) return date
